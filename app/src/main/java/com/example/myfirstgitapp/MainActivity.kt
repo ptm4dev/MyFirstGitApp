@@ -11,8 +11,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        tv.text =  System.getenv("BITRISE_BUILD_NUMBER") ?: "0"
-       // System.getenv("BITRISE_BUILD_NUMBER") ?: "0"
+        /*  tv.text =  System.getenv("BITRISE_BUILD_NUMBER") ?: "0"
+         // System.getenv("BITRISE_BUILD_NUMBER") ?: "0"
+          BuildConfig.getCheckedOutGitCommitHash()*/
+
+        tv.text = BuildConfig.GIT_LAST_COMMIT_DATE
 
     }
 
